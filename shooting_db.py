@@ -1,7 +1,7 @@
 import pymysql
 
-db_user = "dogyu"
-db_password = "dogyu0081"
+db_user = "root"
+db_password = "0081"
 
 # 데이터 베이스 연결
 # host = 아마존 RDS를 통해 SQL로 접속
@@ -9,10 +9,10 @@ db_password = "dogyu0081"
 # 무조건 맨 처음 실행해줘야 하는 기본 함수이다
 def db_connecting(id, key):
     global db, cursor
-    db = pymysql.connect(host="shooting-db.cgb6v3f3cnyt.us-east-2.rds.amazonaws.com",
+    db = pymysql.connect(host="172.16.200.95",
                          user=id, password=key, charset="utf8")
     cursor = db.cursor(pymysql.cursors.DictCursor)
-    cursor.execute('USE shooting_db;')
+    cursor.execute('USE shooting;')
     if (cursor.execute("show status like 'Threads_connected';") == 1):
         print('shooting_db Connected')
 
