@@ -9,8 +9,8 @@ db_password = "0081"
 # 무조건 맨 처음 실행해줘야 하는 기본 함수이다
 def db_connecting(id, key):
     global db, cursor
-    db = pymysql.connect(host="172.16.200.95",
-                         user=id, password=key, charset="utf8")
+    db = pymysql.connect(host="localhost",
+                         user=id, password=key)
     cursor = db.cursor(pymysql.cursors.DictCursor)
     cursor.execute('USE shooting;')
     if (cursor.execute("show status like 'Threads_connected';") == 1):
