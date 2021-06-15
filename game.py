@@ -7,8 +7,8 @@ from datetime import datetime
 # 1. 게임 초기화
 pygame.init()
 
-db_user = "root"
-db_password = "0081"
+db_user = "sh"
+db_password = "2303"
 db.db_connecting(db_user, db_password)
 # 2. 게임창 옵션 설정
 size = [600, 900]

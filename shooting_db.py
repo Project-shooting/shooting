@@ -1,11 +1,8 @@
 import pymysql
 
-db_user = "root"
-db_password = "0081"
-
 # 데이터 베이스 연결
 # host = 아마존 RDS를 통해 SQL로 접속
-# shooting_db를 사용
+# shooting_db를 사용 172.16.200.101
 # 무조건 맨 처음 실행해줘야 하는 기본 함수이다
 def db_connecting(id, key):
     global db, cursor
